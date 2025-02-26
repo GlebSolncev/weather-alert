@@ -1,7 +1,7 @@
 /.phpunit.cache
 /node_modules
+list_tests_results
 /app/Console/Commands/TestCommand.php
-/public/build
 /public/hot
 /public/storage
 /storage/*.key

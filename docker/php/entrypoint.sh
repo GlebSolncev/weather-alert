@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-chmod -R 777 storage/logs
 
 if [ ! -d "vendor" ]; then
     echo "Vendor directory not found. Running composer install..."
@@ -34,5 +33,6 @@ cron
 ./vendor/bin/pest --coverage --colors=never > list_tests_results
 
 echo "" > storage/logs/laravel.log
+chmod -R 777 storage/logs
 
 exec "$@"

@@ -33,6 +33,7 @@ cron
 ./vendor/bin/pest --coverage --colors=never > list_tests_results
 
 echo "" > storage/logs/laravel.log
-chmod -R 777 storage/logs
+chown -R www-data:www-data /var/www/storage
+chmod -R 775 /var/www/storage
 
 exec "$@"

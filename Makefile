@@ -10,7 +10,7 @@ run: build
 
 setup:
 	@echo "Setup and start project"
-	docker-compose up -d
+	docker-compose up --build
 
 .PHONY: clean
 

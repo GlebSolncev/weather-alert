@@ -1,0 +1,203 @@
+
+   PASS  Tests\Unit\Console\Commands\SyncWeatherCommandTest
+  ✓ command calls service                                                0.82s  
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true                                                    0.01s  
+
+   PASS  Tests\Unit\Jobs\SmartAlertJobTest
+  ✓ job handles notification                                             0.07s  
+
+   PASS  Tests\Unit\Jobs\SyncWeatherJobTest
+  ✓ job handles sync                                                     0.05s  
+
+   PASS  Tests\Unit\Notifications\EmailWeatherAlertNotificationTest
+  ✓ creates mail notification                                            0.23s  
+  ✓ creates array representation                                         0.03s  
+
+   PASS  Tests\Unit\Notifications\PushWeatherAlertNotificationTest
+  ✓ creates webpush notification                                         0.03s  
+  ✓ creates array representation                                         0.02s  
+
+   PASS  Tests\Unit\Services\Location\UpdateLocation\Pipelines\DispatchWeatherConditionTest
+  ✓ dispatches weather sync                                              0.06s  
+
+   PASS  Tests\Unit\Services\Location\UpdateLocation\Pipelines\StoreLocationTest
+  ✓ stores new location                                                  0.05s  
+  ✓ updates existing location                                            0.03s  
+
+   PASS  Tests\Unit\Services\Location\UpdateLocation\Pipelines\ValidationLocationTest
+  ✓ validates locations                                                  0.08s  
+
+   PASS  Tests\Unit\Services\Location\UpdateLocation\UpdateLocationServiceTest
+  ✓ process executes pipeline                                            0.05s  
+
+   PASS  Tests\Unit\Services\Location\UpdateLocation\Utils\OpenStreetMapServiceTest
+  ✓ gets location info                                                   0.03s  
+  ✓ throws exception on api error                                        0.02s  
+
+   PASS  Tests\Unit\Services\SmartAlert\NotifySmartAlert\DTO\NotifySmartAlertDTOTest
+  ✓ dto validates correctly                                              0.02s  
+  ✓ dto invalid without required data                                    0.02s  
+
+   PASS  Tests\Unit\Services\SmartAlert\NotifySmartAlert\NotifySmartAlertServiceTest
+  ✓ process executes pipeline                                            0.03s  
+  ✓ process handles exception                                            0.02s  
+
+   PASS  Tests\Unit\Services\SmartAlert\NotifySmartAlert\Pipelines\EmailSmartAlertTest
+  ✓ sends notifications to users with push enabled                       0.11s  
+  ✓ handles empty users collection                                       0.07s  
+
+   PASS  Tests\Unit\Services\SmartAlert\NotifySmartAlert\Pipelines\FetchUserDataTest
+  ✓ fetches users data                                                   0.09s  
+
+   PASS  Tests\Unit\Services\SmartAlert\NotifySmartAlert\Pipelines\PushSmartAlertTest
+  ✓ sends notifications to users with email enabled                      0.06s  
+
+   PASS  Tests\Unit\Services\UserServiceTest
+  ✓ store token creates token                                            0.07s  
+  ✓ store token handles exception                                        0.05s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\Pipelines\CalculateAverageTest
+  ✓ calculates average from providers                                    0.06s  
+  ✓ handles missing provider data                                        0.03s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\Pipelines\DispatchSmartAlertTest
+  ✓ dispatches smart alert for exceeded thresholds                       0.05s  
+  ✓ does not dispatch for normal thresholds                              0.02s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\Pipelines\FetchWeatherDataTest
+  ✓ fetches weather data from providers                                  0.08s  
+  ✓ handle fetches weather data                                          0.06s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\Pipelines\StoreWeatherLocationTest
+  ✓ stores weather data                                                  0.12s  
+  ✓ handles missing result data                                          0.07s  
+  ✓ updates existing weather condition                                   0.11s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\SyncWeatherServiceTest
+  ✓ dispatch sync successfully dispatches jobs                           0.07s  
+  ✓ dispatch sync handles empty locations                                0.02s  
+  ✓ dispatch sync handles exception                                      0.03s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\Utils\OpenMeteoProviderTest
+  ✓ get weather returns formatted data                                   0.44s  
+  ✓ get weather handles failed response                                  0.27s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\Utils\WeatherApiProviderTest
+  ✓ get weather returns formatted data                                   0.06s  
+  ✓ get weather handles failed response                                  0.06s  
+
+   PASS  Tests\Unit\Services\Weather\SyncWeather\WeatherPipelineServiceTest
+  ✓ process executes pipeline                                            0.10s  
+
+   PASS  Tests\Feature\AuthenticationTest
+  ✓ login screen can be rendered                                         0.36s  
+  ✓ users can authenticate using the login screen                        0.16s  
+  ✓ users cannot authenticate with invalid password                      0.11s  
+
+   PASS  Tests\Feature\BrowserSessionsTest
+  ✓ other browser sessions can be logged out                             0.31s  
+
+   PASS  Tests\Feature\DeleteAccountTest
+  ✓ user accounts can be deleted                                         0.12s  
+  ✓ correct password must be provided before account can be deleted      0.12s  
+
+   PASS  Tests\Feature\Livewire\ChartTest
+  ✓ it renders successfully                                              0.20s  
+
+   PASS  Tests\Feature\PasswordConfirmationTest
+  ✓ confirm password screen can be rendered                              0.16s  
+  ✓ password can be confirmed                                            0.07s  
+  ✓ password is not confirmed with invalid password                      0.25s  
+
+   PASS  Tests\Feature\PasswordResetTest
+  ✓ reset password link screen can be rendered                           0.12s  
+  ✓ reset password link can be requested                                 0.18s  
+  ✓ reset password screen can be rendered                                0.11s  
+  ✓ password can be reset with valid token                               0.16s  
+
+   PASS  Tests\Feature\ProfileInformationTest
+  ✓ current profile information is available                             0.20s  
+  ✓ profile information can be updated                                   0.22s  
+
+   PASS  Tests\Feature\RegistrationTest
+  ✓ registration screen can be rendered                                  0.15s  
+  ✓ new users can register                                               0.10s  
+
+   PASS  Tests\Feature\TwoFactorAuthenticationSettingsTest
+  ✓ two factor authentication can be enabled                             0.50s  
+  ✓ recovery codes can be regenerated                                    1.00s  
+  ✓ two factor authentication can be disabled                            0.37s  
+
+   PASS  Tests\Feature\UpdatePasswordTest
+  ✓ password can be updated                                              0.20s  
+  ✓ current password must be correct                                     0.12s  
+  ✓ new passwords must match                                             0.13s  
+
+  Tests:    66 passed (116 assertions)
+  Duration: 11.02s
+
+  Actions/Fortify/CreateNewUser ....................................... 100.0%  
+  Actions/Fortify/PasswordValidationRules ............................. 100.0%  
+  Actions/Fortify/ResetUserPassword ................................... 100.0%  
+  Actions/Fortify/UpdateUserPassword .................................. 100.0%  
+  Actions/Fortify/UpdateUserProfileInformation .... 27, 32, 48..54, 51 / 60.0%  
+  Actions/Jetstream/DeleteUser ........................................ 100.0%  
+  Console/Commands/SyncWeatherCommand ......................... 40..44 / 50.0%  
+  Console/Commands/TestCommand .......................................... 0.0%  
+  Contracts/DTOs/DTOInterface ......................................... 100.0%  
+  DTO/BaseDTO ..................................................... 18 / 50.0%  
+  Http/Controllers/Controller ........................................... 0.0%  
+  Http/Requests/StoreUserLocationRequest ................................ 0.0%  
+  Http/Resources/Chart/CategoryChartResource ............................ 0.0%  
+  Http/Resources/Chart/SeriesChartResource .............................. 0.0%  
+  Http/Resources/ChartResource ........................................ 100.0%  
+  Http/Resources/LocationResource ....................................... 0.0%  
+  Jobs/SmartAlertJob .................................. 40, 46..51, 50 / 53.3%  
+  Jobs/SyncWeatherJob ..................................... 43..48, 47 / 57.1%  
+  Livewire/Chart ...................................................... 100.0%  
+  Livewire/UpdateLocation ............................................... 0.0%  
+  Livewire/UpdateNotification ........................................... 0.0%  
+  Livewire/Vapid ........................................................ 0.0%  
+  Models/Location ..................................................... 100.0%  
+  Models/User ......................................................... 100.0%  
+  Models/WeatherCondition ............................................... 0.0%  
+  Notifications/EmailWeatherAlertNotification ......................... 100.0%  
+  Notifications/PushTesttNotification ................................... 0.0%  
+  Notifications/PushWeatherAlertNotification .......................... 100.0%  
+  Providers/AppServiceProvider ........................................ 100.0%  
+  Providers/FortifyServiceProvider ................................ 43 / 91.7%  
+  Providers/JetstreamServiceProvider .................................. 100.0%  
+  Services/Base/BasePipelineService ................................... 100.0%  
+  Services/Location/LocationService ................................... 100.0%  
+  Services/Location/UpdateLocation/DTO/StoreLocationDTO ................. 0.0%  
+  Services/Location/UpdateLocation/DTO/UpdateLocationDTO .......... 26 / 90.9%  
+  Services/Location/UpdateLocation/Pipelines/DispatchWeatherCondition  13..14 / 60.0%  
+  Services/Location/UpdateLocation/Pipelines/StoreLocation ............ 100.0%  
+  Services/Location/UpdateLocation/Pipelines/ValidationLocation ....... 100.0%  
+  Services/Location/UpdateLocation/UpdateLocationService .. 33..38, 37 / 53.8%  
+  Services/Location/UpdateLocation/Utils/OpenStreetMapService ......... 100.0%  
+  Services/SmartAlert/NotifySmartAlert/DTO/NotifySmartAlertDTO ........ 100.0%  
+  Services/SmartAlert/NotifySmartAlert/NotifySmartAlertService ........ 100.0%  
+  Services/SmartAlert/NotifySmartAlert/Pipelines/EmailSmartAlert  27..30 / 78.6%  
+  Services/SmartAlert/NotifySmartAlert/Pipelines/FetchUserData ........ 100.0%  
+  Services/SmartAlert/NotifySmartAlert/Pipelines/PushSmartAlert  27..28 / 84.6%  
+  Services/UserService ................................................ 100.0%  
+  Services/Weather/SyncWeather/DTO/ProcessDTO ......................... 100.0%  
+  Services/Weather/SyncWeather/DTO/WeatherParamDTO .................... 100.0%  
+  Services/Weather/SyncWeather/Enumes/WeatherUtils .................... 100.0%  
+  Services/Weather/SyncWeather/Pipelines/CalculateAverage ......... 19 / 93.3%  
+  Services/Weather/SyncWeather/Pipelines/DispatchSmartAlert ........... 100.0%  
+  Services/Weather/SyncWeather/Pipelines/FetchWeatherData ......... 29 / 88.9%  
+  Services/Weather/SyncWeather/Pipelines/StoreWeatherLocation ......... 100.0%  
+  Services/Weather/SyncWeather/Utils/OpenMeteoProvider ................ 100.0%  
+  Services/Weather/SyncWeather/Utils/WeatherApiProvider ............... 100.0%  
+  Services/Weather/SyncWeather/Utils/WeatherProviderInterface ......... 100.0%  
+  Services/Weather/SyncWeather/WeatherPipelineService . 30, 36..41, 40 / 46.2%  
+  Services/Weather/SyncWeatherService ................................. 100.0%  
+  View/Components/AppLayout ............................................. 0.0%  
+  View/Components/GuestLayout ......................................... 100.0%  
+  ────────────────────────────────────────────────────────────────────────────  
+                                                                 Total: 67.8 %  
+

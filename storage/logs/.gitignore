@@ -1,0 +1,5 @@
+!.gitignor
+sync-weather/*.log
+smart-alert/*.log
+
+*.log
